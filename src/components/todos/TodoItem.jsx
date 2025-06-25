@@ -6,7 +6,7 @@ const TodoItem = ({todo}) => {
         
           <span className="font-semibold mr-2"> Name:</span> {todo.name}
         </h1>
-        <h1><span className="font-semibold mr-2" >Desc: </span> {todo.desc}</h1>
+        <h1><span className="font-semibold mr-2" >Description: </span> {todo.desc}</h1>
       </div>
       <div>{todo.isComplete && "✅"}</div>
     </div>

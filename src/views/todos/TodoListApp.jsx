@@ -4,10 +4,11 @@ import TodoForm from "../../components/todos/TodoForm";
 
 
 const url = "https://jsonplaceholder.typicode.com/todos";
+
 const TodoListApp = () => {
   const [todos, setTodos] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState("")
 
   const [todoData, setTodoData] = useState({
@@ -16,6 +17,8 @@ const TodoListApp = () => {
     desc: "",
     completed: false,
   });
+
+  // const listTopRef = useRef(null);
 
   const handleInputChange = (event) => {
     setTodoData({
@@ -46,42 +49,26 @@ const TodoListApp = () => {
       setIsEditing(false);
     } else {
       setTodos((prevTodos) => [
-        ...prevTodos,
+        
         {
           ...todoData,
           id: Math.floor(Math.random() * 1000),
         },
+        ...prevTodos,
       ]);
 
-      // try {
-      //   const response = await fetch(url, {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(
-      //       {
-      //             ...todoData,
-      //             id: Math.floor(Math.random() * 1000),
-      //           },
-      //     ),
-      //   });
-  
-      //   if (response.ok) {
-      //     toast.success("Message sent successfully! 🎉");
-      //     reset();
-      //   } else {
-      //     const errorDetails = await response.json();
-      //     toast.error("Failed to send message. Please try again.");
-      //     console.error("Error sending email:", errorDetails.message);
-      //   }
-    }
-
+    // if (listTopRef.current) {
+    //   listTopRef.current.scrollIntoView({ 
+    //     behavior: "smooth",
+    //     block: "start", 
+    //   });
+    //   }
     setTodoData({
       todoName: "",
       desc: "",
       completed: false,
     });
+    }
   };
 
   const handleDeleteTodo = (id) => {
@@ -140,10 +127,10 @@ const TodoListApp = () => {
   return (
     <div>
       <h1 className="text-2xl text-gray-700 text-center font-bold">
-        Todo List App
+        Todo List
       </h1>
-
-      <div className="my-5">
+      {/* //sticky top-0 bg-white z-10 p-5 shadow-md */}
+      <div className="my-5"> 
         <TodoForm
           todoData={todoData}
           isEditing={isEditing}
@@ -156,7 +143,7 @@ const TodoListApp = () => {
         <p className="text-center text-gray-500">Loading...</p>
       ) : (
         <div>
-          {/* div rendering our todo list items */}
+          {/* <div ref={listTopRef}></div> */}
           <TodoList
             myTodos={todos}
             handleDeleteTodo={handleDeleteTodo}

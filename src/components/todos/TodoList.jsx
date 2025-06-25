@@ -1,6 +1,7 @@
 import { PencilIcon , TrashIcon} from "@heroicons/react/24/outline";
 
 const TodoList = ({ myTodos, handleDeleteTodo, handleUpdate }) => {
+
   return (
     <div>
       {myTodos.map((todo) => (
