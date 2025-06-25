@@ -2,9 +2,8 @@ const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) 
   return (
     <div>
       <form
-        action=""
         className="border border-gray-500 rounded-md p-5 flex flex-col gap-4"
-        // onSubmit={handleFormSubmit}
+        onSubmit={handleFormSubmit}
       >
         <input
           type="text"
@@ -36,7 +35,6 @@ const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) 
         <button
           type="submit"
           className="p-1.5 rounded-md bg-gray-800 text-white"
-          onClick={handleFormSubmit}
         >
           {isEditing ? "Update Todo" : "Add Todo"}
         </button>
