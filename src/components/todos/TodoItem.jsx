@@ -1,4 +1,3 @@
-
 const TodoItem = ({todo}) => {
   return (
     <div className="bg-gray-100  my-3 p-3 rounded-lg flex justify-between items-center">

@@ -1,4 +1,3 @@
-
 const Navbar = ({ appTitle }) => {
   return (
     <div className="bg-gray-800 text-white text-lg flex justify-center gap-5 p-4">

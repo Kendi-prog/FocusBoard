@@ -1,5 +1,3 @@
-
-
 const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) => {
   return (
     <div>
@@ -11,7 +9,7 @@ const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) 
         <input
           type="text"
           className="border border-gray-300 p-1.5 rounded-md "
-          placeholder="Enter todo"
+          placeholder="Enter task name"
           id="todoName"
           value={todoData.todoName}
           onChange={handleInputChange}
@@ -28,7 +26,6 @@ const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) 
           <input
             type="checkbox"
             className="border border-gray-300 p-1.5 rounded-md "
-            placeholder="Enter description"
             id="completed"
             value={todoData.completed}
             onChange={handleInputChange}

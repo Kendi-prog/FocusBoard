@@ -1,6 +1,3 @@
-import React from "react";
-import TodoItem from "./todos/TodoItem";
-
 const TodoList = ({ myTodos, handleDeleteTodo, handleUpdate }) => {
   return (
     <div>
