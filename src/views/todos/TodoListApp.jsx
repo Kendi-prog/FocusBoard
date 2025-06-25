@@ -15,7 +15,7 @@ const TodoListApp = () => {
     id: null,
     todoName: "",
     desc: "",
-    completed: false,
+    status: "not-started",
   });
 
   // const listTopRef = useRef(null);
@@ -23,10 +23,7 @@ const TodoListApp = () => {
   const handleInputChange = (event) => {
     setTodoData({
       ...todoData,
-      [event.target.id]:
-        event.target.type === "checkbox"
-          ? event.target.checked
-          : event.target.value,
+      [event.target.id]: event.target.value,
     });
   };
 
@@ -41,7 +38,7 @@ const TodoListApp = () => {
                 ...todo,
                 todoName: todoData.todoName,
                 desc: todoData.desc,
-                completed: todoData.completed,
+                status: todoData.status,
               }
             : todo
         )
@@ -66,7 +63,7 @@ const TodoListApp = () => {
     setTodoData({
       todoName: "",
       desc: "",
-      completed: false,
+      status: "not-started",
     });
     }
   };
@@ -83,7 +80,7 @@ const TodoListApp = () => {
       id: todoToUpdate.id,
       todoName: todoToUpdate.todoName,
       desc: todoToUpdate.desc,
-      completed: todoToUpdate.completed,
+      status: todoToUpdate.status,
     });
   };
 
@@ -108,7 +105,7 @@ const TodoListApp = () => {
           id: todo.id,
           todoName: todo.title,
           desc: "No description available",
-          completed: todo.completed,
+          status: todo.status,
         })));
         
         setIsLoading(false);

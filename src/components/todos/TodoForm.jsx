@@ -5,32 +5,50 @@ const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) 
         className="border border-gray-500 rounded-md p-5 flex flex-col gap-4"
         onSubmit={handleFormSubmit}
       >
-        <input
-          type="text"
-          className="border border-gray-300 p-1.5 rounded-md "
-          placeholder="Enter task name"
-          id="todoName"
-          value={todoData.todoName}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          className="border border-gray-300 p-1.5 rounded-md "
-          placeholder="Enter description"
-          id="desc"
-          value={todoData.desc}
-          onChange={handleInputChange}
-        />
-        <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-11">
+          <label htmlFor="name" className="text-sm font-medium">
+            Name:
+          </label>
           <input
-            type="checkbox"
-            className="border border-gray-300 p-1.5 rounded-md "
-            id="completed"
-            value={todoData.completed}
+            type="text"
+            className="border border-gray-300 p-1.5 rounded-md flex-1"
+            placeholder="Enter task name"
+            id="todoName"
+            value={todoData.todoName}
             onChange={handleInputChange}
           />
-          <label htmlFor="">Completed</label>
         </div>
+
+        <div className="flex items-center gap-2">
+          <label htmlFor="desc" className="text-sm font-medium">
+            Description:
+          </label>
+          <input
+            type="text"
+            className="border border-gray-300 p-1.5 rounded-md flex-1"
+            placeholder="Enter description"
+            id="desc"
+            value={todoData.desc}
+            onChange={handleInputChange}
+          />
+        </div>
+   
+        <div className="flex items-center gap-10">
+          <label htmlFor="status" className="text-sm font-medium">
+            Status:
+          </label>
+          <select
+            id="status"
+            value={todoData.status}
+            onChange={handleInputChange}
+            className="border border-gray-300 p-2 rounded-md flex-1"
+          >
+            <option value="not-started">Not Started</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
 
         <button
           type="submit"

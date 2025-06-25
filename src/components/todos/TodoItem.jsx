@@ -11,11 +11,30 @@ const TodoItem = ({ todo, handleUpdate, handleDeleteTodo }) => {
           <span className="font-semibold mr-2">Description:</span> {todo.desc}
         </h1>
 
-        {todo.completed && (
+        {/* {todo.completed && (
+          <span className="mt-2 inline-block bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+            ✓ Completed
+          </span>
+        )} */}
+
+        {todo.status === "completed" && (
           <span className="mt-2 inline-block bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
             ✓ Completed
           </span>
         )}
+
+        {todo.status === "in-progress" && (
+          <span className="mt-2 inline-block bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+            ⏳ In Progress
+          </span>
+        )}
+
+        {todo.status === "not-started" && (
+          <span className="mt-2 inline-block bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">
+            🕓 Not Started
+          </span>
+        )}
+
       </div>
 
       <div className="flex gap-4 items-center">
