@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TodoList from "../components/TodoList";
-import TodoForm from "../components/TodoForm";
+import TodoForm from "../../components/todos/TodoForm";
 
 
 const url = "https://jsonplaceholder.typicode.com/todos";
