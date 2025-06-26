@@ -1,16 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { ClipboardCheck } from "lucide-react";
 
-const Navbar = ({ appTitle = "TaskAura" }) => {
+const Navbar = ({ appTitle = "FocusBoard" }) => {
   return (
     <nav className="bg-[#0f172a] text-white shadow-md py-4 px-6">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         <div className="flex items-center gap-2">
           {/*AppTitle and icon */}
           <span className="text-blue-400 text-2xl drop-shadow-glow">📋</span>
-          <h1 className="text-xl font-bold text-blue-300 drop-shadow-md tracking-wide">
+          <Link to="/" className="text-lg font-bold text-blue-300 drop-shadow-md tracking-wide">
             {appTitle}
-          </h1>
+          </Link>
         </div>
 
         {/* Links */}

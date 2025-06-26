@@ -2,7 +2,7 @@ import { PencilIcon , TrashIcon } from "@heroicons/react/24/outline";
 
 const TodoItem = ({ todo, handleUpdate, handleDeleteTodo }) => {
   return (
-    <div className="bg-gray-100 my-3 p-3 rounded-lg flex justify-between items-center">
+    <div className="bg-white my-3 p-3 rounded-lg flex justify-between items-center ">
       <div>
         <h1>
           <span className="font-semibold mr-2">Name:</span> {todo.todoName}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import UserCard from "../../components/users/userCard";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -53,7 +54,6 @@ const UsersList = () => {
                     </div>
                 </div>
             )}
-
 
             {error && <p className="text-center text-red-500">{error}</p>}
         </div>

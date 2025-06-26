@@ -6,7 +6,7 @@
 .nav ul {
     list-style: none;
     display: flex;
-    background-color: darkolivegreen;
+    background-color: #bfdbfe;
     border-radius: 7px;
 }
 
@@ -24,5 +24,5 @@
 
 /* CSS Modules feature */
 .nav a:global(.active) {
-    background-color: grey;
+    background-color:#60a5fa
 }

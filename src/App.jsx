@@ -23,13 +23,13 @@ const App = () => {
             <Route path="not-started" element={<NotStarted />} />
             <Route path="in-progress" element={<InProgress />} />
             <Route path="completed" element={<Completed />} />
-            {/* Optional: default redirect */}
+            {/* default redirect */}
             <Route index element={<NotStarted />} />
           </Route>
           <Route path="/users" element={<UsersList />}>
-              <Route path="*" element={<PageNotFound />} /> 
+              {/* <Route path="*" element={<PageNotFound />} />  */} 
+            <Route path=":id" element={<User />} />
           </Route>
-          <Route path="/users/:id" element={<User />} />
           <Route path="/about" element={<About />}/>
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>

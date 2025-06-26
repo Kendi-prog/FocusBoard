@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="min-h-screen bg-white text-[#0f172a] px-6 py-12">
+    <div className="min-h-screen text-[#0f172a] px-6 py-12">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-4xl font-extrabold mb-4 text-blue-700">
           About This App

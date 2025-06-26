@@ -54,7 +54,6 @@ export default function User() {
                 </div>
             )}
 
-
             {error && <p className="text-center text-red-500">{error}</p>}
         </div>
     );
