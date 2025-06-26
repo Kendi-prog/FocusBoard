@@ -10,7 +10,7 @@ export default function TodosNav() {
                     <NavLink to="not-started">Not-Started</NavLink>
                 </li>
                 <li>
-                    <NavLink to="inProgress">InProgress</NavLink>
+                    <NavLink to="in-progress">InProgress</NavLink>
                 </li>
                 <li>
                     <NavLink to="completed">Completed</NavLink>

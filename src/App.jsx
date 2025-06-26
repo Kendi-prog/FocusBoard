@@ -6,6 +6,9 @@ import UsersList from "./views/users/usersList";
 import PageNotFound from "./views/pageNotFound/pageNotFound";
 import Home from "./views/home/home";
 import TodoLayout from "./views/todos/todosLayout";
+import NotStarted from "./components/filteredTodos/notStarted";
+import InProgress from "./components/filteredTodos/inProgress";
+import Completed from "./components/filteredTodos/completed";
 import About from "./views/about/about";
 
 
@@ -17,6 +20,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/todo" element={<TodoLayout />}>
+            <Route path="not-started" element={<NotStarted />} />
+            <Route path="in-progress" element={<InProgress />} />
+            <Route path="completed" element={<Completed />} />
+            {/* Optional: default redirect */}
+            <Route index element={<NotStarted />} />
           </Route>
           <Route path="/users" element={<UsersList />}>
               {/* todo <Route path="*" element={<PageNotFound />} /> */}
