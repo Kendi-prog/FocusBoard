@@ -6,7 +6,7 @@ import Modal from "../../components/modal/modal";
 
 const url = "https://jsonplaceholder.typicode.com/todos";
 
-const TodoListApp = () => {
+const Home = () => {
   const [todos, setTodos] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -231,4 +231,4 @@ const TodoListApp = () => {
   );
 };
 
-export default TodoListApp;
+export default Home;
