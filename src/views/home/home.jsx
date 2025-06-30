@@ -20,6 +20,7 @@ const Home = () => {
   const [deletedTodoName, setDeletedTodoName] = useState("");
   const [todoToDeleteId, setTodoDeleteId] = useState(null);
   const [updatedTodoName, setUpdatedTodoName] = useState("");
+  const [addedTodoName, setAddedTodoName] = useState("");
 
   const [todoData, setTodoData] = useState({
     id: null,
@@ -45,6 +46,8 @@ const Home = () => {
       setIsSuccessModalOpen(true);
     } else {
       addTodo(todoData);
+      setAddedTodoName(todoData.todoName);
+      setIsSuccessModalOpen(true);
     }
 
     setTodoData({
@@ -77,6 +80,7 @@ const Home = () => {
   const closeSuccessModal = () => {
     setIsSuccessModalOpen(false);
     setDeletedTodoName("");
+    setAddedTodoName("");
   };
 
   return (
@@ -140,7 +144,7 @@ const Home = () => {
         </p>
         <p className="text-center text-gray-700 mt-2">
           Successfully updated or deleted item:{" "}
-          <span className="font-semibold">{deletedTodoName || updatedTodoName}</span>
+          <span className="font-semibold">{deletedTodoName || updatedTodoName || addedTodoName}</span>
         </p>
         <div className="flex justify-center mt-6">
           <button
