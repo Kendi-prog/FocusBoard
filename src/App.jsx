@@ -25,6 +25,7 @@ const App = () => {
             <Route path="completed" element={<Completed />} />
             {/* default redirect */}
             <Route index element={<NotStarted />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
           <Route path="/users" element={<UsersList />}>
               {/* <Route path="*" element={<PageNotFound />} />  */} 
