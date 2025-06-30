@@ -143,7 +143,7 @@ const Home = () => {
           Success!
         </p>
         <p className="text-center text-gray-700 mt-2">
-          Successfully updated or deleted item:{" "}
+          Successfully added or updated or deleted item:{" "}
           <span className="font-semibold">{deletedTodoName || updatedTodoName || addedTodoName}</span>
         </p>
         <div className="flex justify-center mt-6">

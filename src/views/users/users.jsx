@@ -1,13 +1,12 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-//import UserCard from "../../components/users/userCard.jsx";
 import MoreDetailedUserCard from "../../components/users/userMoreDetails";
 
 
 const url = "https://jsonplaceholder.typicode.com/users";
 
 export default function User() {
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
 
@@ -38,7 +37,7 @@ export default function User() {
             }
         }
         getData();
-    },[])
+    },[id])
 
 
     return (
