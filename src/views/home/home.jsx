@@ -2,7 +2,7 @@ import { useState } from "react";
 import useTodos from "../../context/useTodos";
 import TodoForm from "../../components/todos/TodoForm";
 import TodoList from "../../components/todos/TodoList";
-import Modal from "../../components/modal/modal";
+import Modal from '../../components/modal/Modal';
 
 const Home = () => {
   const {
